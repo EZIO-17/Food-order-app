@@ -26,6 +26,6 @@ const Modal = props => {
         <Backdrop />
         <ModalOverlay />
     </Fragment>
-};
+)};
 
 export default Modal;
