@@ -3,6 +3,7 @@ import './App.css';
 import Cart from './components/Cart/Cart';
 import Header from './components/Layout/Header';
 import Meals from './components/Meals/Meals';
+import CartProvider from './store/CartProvider';
 // import Card from './components/UI/Card';
 
 function App() {
@@ -17,13 +18,13 @@ function App() {
   }
 
   return (
-    <Fragment>
+    <CartProvider>
       {cartIsShown && <Cart onClose={hideCartHandeler} />}
       <Header onShowCart={showCartHandeler} />
       <main>
         <Meals />
       </main>
-    </Fragment>
+    </CartProvider>
   );
 }
 
