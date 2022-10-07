@@ -10,7 +10,8 @@ const MealItemForm = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    const enteredAmount = amountInputRef.current.value;
+    const curr_id = 'amount_' + props.id
+    const enteredAmount = document.getElementById(curr_id).value;
     const enteredAmountNumber = +enteredAmount;
 
     if (
@@ -29,6 +30,7 @@ const MealItemForm = (props) => {
     <form className={classes.form} onSubmit={submitHandler}>
       <Input
         ref={amountInputRef}
+        id = 'input_items'
         label='Amount'
         input={{
           id: 'amount_' + props.id,
