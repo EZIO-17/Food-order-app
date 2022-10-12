@@ -1,10 +1,10 @@
 import { Fragment, useState } from 'react';
 import './App.css';
-import Cart from './components/Cart/Cart';
-import Header from './components/Layout/Header';
-import Meals from './components/Meals/Meals';
+import Cart from './Pages/Menu_page/components/Cart/Cart';
+import Header from './Pages/Menu_page/components/Layout/Header'
+import Meals from './Pages/Menu_page/components/Meals/Meals'
 import CartProvider from './store/CartProvider';
-// import Card from './components/UI/Card';
+
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
